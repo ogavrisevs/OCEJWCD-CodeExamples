@@ -1,0 +1,12 @@
+project(":cp:cp_2"){
+
+    //open ->  http://localhost:8020/static/Sample.html
+
+    jettyRun{
+        httpPort = 8020
+        webAppSourceDirectory = file("${projectDir}/src/main/webapp/")
+        contextPath = ""
+    }
+}
+
+

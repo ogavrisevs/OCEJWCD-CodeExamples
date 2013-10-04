@@ -1,0 +1,68 @@
+
+/*
+Tested
+ */
+project(":cp:cp_1"){
+
+    def curlOptions = []
+    //curlOptions.add("--verbose")
+    curlOptions.add("--silent")
+
+    task simpleGet(type: Exec) {
+        commandLine "curl", "-X", "GET", "httpbin.org/get"
+        args curlOptions
+    }
+
+    task getWithParam(type: Exec) {
+        commandLine "curl", "-X", "GET", "httpbin.org/get?key=val"
+        args curlOptions
+    }
+
+    task simplePut(type: Exec){
+        commandLine "curl", "-X", "PUT", "--data", "putSomeDate", "httpbin.org/put"
+        args curlOptions
+    }
+
+    task putFile(type: Exec){
+        commandLine "curl",
+                "-X", "PUT",
+                "--data", "@src/main/resources/put.file",
+                "httpbin.org/put"
+        args curlOptions
+    }
+
+    task simplePost (type: Exec){
+        commandLine "curl",
+                "-X", "POST",
+                "--data", "postSomeData",
+                "httpbin.org/post"
+        args curlOptions
+    }
+
+    task postWithParams (type: Exec){
+        commandLine "curl",
+                "-X", "POST",
+                "--data", "param1=val1&param2=val2",
+                "httpbin.org/post"
+        args curlOptions
+    }
+
+    task postJson(type: Exec){
+        commandLine "curl",
+                "-X", "POST",
+                "--data", "@src/main/resources/post.json",
+                "--header", "Content-Type:application/json",
+                "httpbin.org/post"
+        args curlOptions
+    }
+
+    task simpleHead(type: Exec) {
+        commandLine "curl", "-X", "HEAD", "-i", "httpbin.org/get"
+        ignoreExitValue true
+    }
+
+    task simpleTRACE(type: Exec) {
+        commandLine "curl", "-X", "TRACE", "-i", "pods.lv"
+        ignoreExitValue true
+    }
+}

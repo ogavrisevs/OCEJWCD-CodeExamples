@@ -1,0 +1,26 @@
+allprojects {
+    task hello << {task -> println "I'm $task.project.name" }
+}
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'jetty'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compile group: 'javax.servlet', name: 'servlet-api', version: '2.3'
+        compile group: 'org.apache.tomcat', name: 'servlet-api', version: '6.0.35'
+    }
+
+    jettyRun{
+        httpPort=8081
+        webAppSourceDirectory = file("${projectDir}/src/main/webapp/")
+        contextPath='/'
+    }
+}
+
+
+

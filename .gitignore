@@ -1,0 +1,12 @@
+log
+.idea
+.git
+.gradle
+build
+out
+gradle-app.setting
+*.sublime*
+*.iml
+*.ipr
+*.iws
+
