@@ -11,8 +11,8 @@ subprojects {
     }
 
     dependencies {
-        compile group: 'javax.servlet', name: 'servlet-api', version: '2.3'
-        compile group: 'org.apache.tomcat', name: 'servlet-api', version: '6.0.35'
+        compile group: 'javax.servlet', name: 'servlet-api', version: '2.5'
+        //compile group: 'org.apache.tomcat', name: 'servlet-api', version: '6.0.35'
     }
 
     jettyRun{

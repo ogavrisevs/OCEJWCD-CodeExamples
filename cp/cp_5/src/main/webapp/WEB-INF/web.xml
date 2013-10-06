@@ -7,7 +7,7 @@
 
     <servlet>
         <servlet-name>servletName</servlet-name>
-        <servlet-class>com.bla.laa.SimpleServlet</servlet-class>
+        <servlet-class>com.bla.laa.SsimpleServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>servletName</servlet-name>

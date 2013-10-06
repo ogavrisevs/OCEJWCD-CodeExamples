@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class SimpleServlet extends HttpServlet {
+public class SsimpleServlet extends HttpServlet {
 
     private final String pageBeginig = "<!DOCTYPE html><html><head><title>title</title></head><body>";
     private final String pageEnd = "</body></html>";

@@ -10,7 +10,7 @@
     </welcome-file-list>
     <servlet>
         <servlet-name>oneParam</servlet-name>
-        <servlet-class>com.bla.laa.OneParam</servlet-class>
+        <servlet-class>com.bla.laa.SimpleServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>oneParam</servlet-name>

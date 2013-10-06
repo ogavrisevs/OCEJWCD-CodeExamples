@@ -1,0 +1,10 @@
+project(":cp:cp_3"){
+
+    jettyRun{
+        httpPort = 8030
+        webAppSourceDirectory = file("${projectDir}/src/main/webapp/")
+        contextPath = ""
+    }
+}
+
+
